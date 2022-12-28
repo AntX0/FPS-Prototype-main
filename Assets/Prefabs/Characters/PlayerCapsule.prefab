@@ -503,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 0}
-  _range: 15
+  _range: 25
   shoot:
     m_Name: Shoot
     m_Type: 0
@@ -536,5 +536,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9c2ffdfd8a4edb41ac1bac0b49bf617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fpsCamera: {fileID: 0}
+  _zoomedOutFieldOfView: 90
+  _zoomedInFieldOfView: 20
+  _aim:
+    m_Name: Aim
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: b69f8e20-d640-47d0-b2d3-fa01befbff5f
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 347ce56a-685c-48f8-bf01-9d296c197073
+      m_Path: <Mouse>/rightButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Aim
+      m_Flags: 0
+    m_Flags: 0
+  _mouseSensitivity: 1
+  _zoomedInMouseSensitivity: 0.5
+--- !u!114 &4295014025975161243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3548711310762610928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec74f54c34f1a9d4588e2c061809c971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
