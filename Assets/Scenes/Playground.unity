@@ -1126,10 +1126,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1059424532, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
-      propertyPath: _range
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1059424532, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: FPCamera
       value: 
       objectReference: {fileID: 2116867266}
@@ -1140,74 +1136,9 @@ PrefabInstance:
       objectReference: {fileID: 1125712503}
     - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
-      propertyPath: aim.m_Id
-      value: 646fd8e4-2718-4a42-98a0-b1d4be2f1382
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_Id
-      value: b69f8e20-d640-47d0-b2d3-fa01befbff5f
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
       propertyPath: _fpsCamera
       value: 
       objectReference: {fileID: 1101738274}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: aim.m_Name
-      value: Aim
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_Name
-      value: Aim
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: aim.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_SingletonActionBindings.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: aim.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 470d4f7b-fd12-4923-bc28-f77105b4dd02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_SingletonActionBindings.Array.data[0].m_Id
-      value: 347ce56a-685c-48f8-bf01-9d296c197073
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: aim.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Mouse>/rightButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_SingletonActionBindings.Array.data[0].m_Path
-      value: <Mouse>/rightButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: aim.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Aim
-      objectReference: {fileID: 0}
-    - target: {fileID: 3064125401490088509, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: _aim.m_SingletonActionBindings.Array.data[0].m_Action
-      value: Aim
-      objectReference: {fileID: 0}
-    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
-        type: 3}
-      propertyPath: RotationSpeed
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_Name
