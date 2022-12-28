@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private ParticleSystem _muzzleFlash;
     [SerializeField] private GameObject _hitEffect;
     [SerializeField] private float _fireRate;
+    [SerializeField] private Ammo _ammoSlot;
     private float _nextTimeToFire = 0;
 
     private void OnEnable()
@@ -34,6 +35,8 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        if (_ammoSlot.GetCurrentAmmo() == 0) { return; }
+        _ammoSlot.ReduceCurrentAmmo();
         ProcessRayCast();
         PlayMuzzleFlash();
     }
