@@ -18,6 +18,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
+        GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;
     }
 
     void OnDrawGizmosSelected()
@@ -41,6 +42,7 @@ public class EnemyAI : MonoBehaviour
             isProvoked = true;     
         }
     }
+
 
     private void EngageTarget()
     {

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -6,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        OnTakenDamage?.Invoke(this, null);
         _hitPoints -= damage;
 
         if (_hitPoints <= 0)
@@ -13,4 +15,6 @@ public class EnemyHealth : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public event EventHandler OnTakenDamage;
 }

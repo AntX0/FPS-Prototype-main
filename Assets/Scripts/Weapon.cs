@@ -49,7 +49,7 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, _range))
         {
             CreateHitImpact(hit);
-            var target = hit.transform.GetComponent<EnemyHealth>();
+            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
             if (target)
             {
                 target.TakeDamage(_damage);
@@ -66,6 +66,5 @@ public class Weapon : MonoBehaviour
         if (hit.transform == null) { return; }
         GameObject impact = Instantiate(_hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
         Destroy(impact, 1f);
-        
     }
 }

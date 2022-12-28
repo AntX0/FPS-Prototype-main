@@ -177,6 +177,7 @@ GameObject:
   - component: {fileID: 5420857361349278248}
   - component: {fileID: 8616685848737228376}
   - component: {fileID: 4172758145167299752}
+  - component: {fileID: 135756641613574984}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -395,6 +396,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5270b0e9ad497614b8c951bbd1dc419c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerHitPoints: 120
+--- !u!114 &135756641613574984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d96b42dfa1c82b4dbe8c75478871d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 0}
 --- !u!1001 &3547840680280937720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -488,7 +503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FPCamera: {fileID: 0}
-  _range: 100
+  _range: 15
   shoot:
     m_Name: Shoot
     m_Type: 0
@@ -511,3 +526,15 @@ MonoBehaviour:
   _hitEffect: {fileID: 4242797605585737684, guid: 748d6370297cdd745a1d59cdc8c54e28,
     type: 3}
   _fireRate: 10
+--- !u!114 &3064125401490088509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3548711310762610928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c2ffdfd8a4edb41ac1bac0b49bf617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
