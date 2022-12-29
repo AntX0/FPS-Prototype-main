@@ -1149,10 +1149,55 @@ PrefabInstance:
       propertyPath: _fpsCamera
       value: 
       objectReference: {fileID: 1101738274}
-    - target: {fileID: 5394442229025565261, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+    - target: {fileID: 3548711310762610928, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394442229025565261, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _timeToSwitch
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _currentWeapon
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_Id
+      value: 95d4269a-2380-4c1a-9f0c-83c1d653c8dd
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_Name
+      value: Key To Switch Weapon
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_SingletonActionBindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_SingletonActionBindings.Array.data[0].m_Id
+      value: 949a70ee-5401-4a60-8e45-c98c22302315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_SingletonActionBindings.Array.data[0].m_Path
+      value: <Keyboard>/q
+      objectReference: {fileID: 0}
+    - target: {fileID: 7954616155216805401, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _keyToSwitchWeapon.m_SingletonActionBindings.Array.data[0].m_Action
+      value: Key To Switch Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
