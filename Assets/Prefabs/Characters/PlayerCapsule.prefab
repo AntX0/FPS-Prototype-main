@@ -46,7 +46,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2372a2dea5a449b4f8c65a73209ad7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentWeapon: 0
+  _currentWeapon: 0
+  _keyToSwitchWeapon:
+    m_Name: Key To Switch Weapon
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 95d4269a-2380-4c1a-9f0c-83c1d653c8dd
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 949a70ee-5401-4a60-8e45-c98c22302315
+      m_Path: <Keyboard>/q
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Key To Switch Weapon
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &4135013735270702863
 GameObject:
   m_ObjectHideFlags: 0
@@ -438,7 +455,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec74f54c34f1a9d4588e2c061809c971, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _ammoAmount: 30
+  _ammoSlots:
+  - ammoType: 0
+    ammoAmount: 90
+  - ammoType: 1
+    ammoAmount: 10
 --- !u!1001 &4561241546132571450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454,7 +475,7 @@ PrefabInstance:
     - target: {fileID: 1041254174560802250, guid: 03df10231f8ffcb41a1422cffac7be58,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1044528669977541850, guid: 03df10231f8ffcb41a1422cffac7be58,
         type: 3}
