@@ -125,6 +125,7 @@ MonoBehaviour:
     type: 3}
   _fireRate: 1
   _ammoSlot: {fileID: 0}
+  _ammoType: 1
 --- !u!114 &4764979786811043925
 MonoBehaviour:
   m_ObjectHideFlags: 0
