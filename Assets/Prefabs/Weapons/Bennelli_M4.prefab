@@ -122,8 +122,9 @@ MonoBehaviour:
     m_Flags: 0
   _damage: 40
   _muzzleFlash: {fileID: 4248569961964023347}
-  _hitEffect: {fileID: 4242797605585737684, guid: 748d6370297cdd745a1d59cdc8c54e28,
-    type: 3}
+  _hitEffect:
+  - {fileID: 4242797605585737684, guid: 748d6370297cdd745a1d59cdc8c54e28, type: 3}
+  - {fileID: 4242797605585737684, guid: d806a62a09155414a99ac85803f4a6e3, type: 3}
   _fireRate: 1
   _ammoSlot: {fileID: 0}
   _ammoType: 1

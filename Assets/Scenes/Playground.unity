@@ -201,7 +201,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1544
+  m_Name: pb_Mesh-1546
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -806,10 +806,50 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1612863196}
+    - target: {fileID: 1204712678, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2205.608
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204712678, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1076.8647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204712678, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12.9822
+      objectReference: {fileID: 0}
+    - target: {fileID: 1204712678, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.9954
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470810013, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1994090147, guid: f0271df749728104eac22c3d897fd8ce, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1612863196}
+    - target: {fileID: 328602690421294081, guid: f0271df749728104eac22c3d897fd8ce,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.39506945
+      objectReference: {fileID: 0}
+    - target: {fileID: 328602690421294081, guid: f0271df749728104eac22c3d897fd8ce,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.39506945
+      objectReference: {fileID: 0}
+    - target: {fileID: 328602690421294081, guid: f0271df749728104eac22c3d897fd8ce,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.4339623
+      objectReference: {fileID: 0}
+    - target: {fileID: 328602690421294081, guid: f0271df749728104eac22c3d897fd8ce,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1992104595683069851, guid: f0271df749728104eac22c3d897fd8ce,
         type: 3}
       propertyPath: m_Name
@@ -1088,7 +1128,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1556
+  m_Name: pb_Mesh-1558
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1436,7 +1476,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-1568
+  m_Name: pb_Mesh-1570
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1604,6 +1644,30 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1470810013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1470810013, guid: f0271df749728104eac22c3d897fd8ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 746329221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1552775439 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 328602690421294081, guid: f0271df749728104eac22c3d897fd8ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 746329221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1612863195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,6 +2803,15 @@ PrefabInstance:
       propertyPath: _ammoText
       value: 
       objectReference: {fileID: 1070052136}
+    - target: {fileID: 1059424532, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: _hitEffect.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059424532, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: _hitEffect.Array.data[1]
+      value: 
+      objectReference: {fileID: 4242797605585737684, guid: d806a62a09155414a99ac85803f4a6e3,
+        type: 3}
     - target: {fileID: 135756641613574984, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: gameOverCanvas
@@ -2764,6 +2837,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1038994591167354051, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _hitEffect.Array.data[1]
+      value: 
+      objectReference: {fileID: 4242797605585737684, guid: d806a62a09155414a99ac85803f4a6e3,
+        type: 3}
     - target: {fileID: 1498880462038795224, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: _impactCanvas
@@ -2779,6 +2858,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4172758145167299752, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _chipSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4172758145167299752, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _playerHealth
+      value: 
+      objectReference: {fileID: 1470810013}
+    - target: {fileID: 4172758145167299752, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _playerHealthFront
+      value: 
+      objectReference: {fileID: 1470810013}
+    - target: {fileID: 4172758145167299752, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _playerHealthBackground
+      value: 
+      objectReference: {fileID: 1552775439}
     - target: {fileID: 5371774344826727303, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_Enabled

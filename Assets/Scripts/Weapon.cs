@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -10,7 +11,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] InputAction shoot;
     [SerializeField] private float _damage;
     [SerializeField] private ParticleSystem _muzzleFlash;
-    [SerializeField] private GameObject _hitEffect;
+    [SerializeField] private GameObject[] _hitEffect;
     [SerializeField] private float _fireRate;
     [SerializeField] private Ammo _ammoSlot;
     [SerializeField] private AmmoType _ammoType;
@@ -26,7 +27,7 @@ public class Weapon : MonoBehaviour
 
     private void OnDisable()
     {
-        shoot.Disable(); 
+        shoot.Disable();
     }
 
     void Update()
@@ -43,7 +44,7 @@ public class Weapon : MonoBehaviour
     {
         int currentAmmo = _ammoSlot.GetCurrentAmmo(_ammoType);
         _ammoText.text = $"{_ammoType} {currentAmmo}";
-        
+
     }
 
     private void Shoot()
@@ -86,7 +87,13 @@ public class Weapon : MonoBehaviour
     private void CreateHitImpact(RaycastHit hit)
     {
         if (hit.transform == null) { return; }
-        GameObject impact = Instantiate(_hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-        Destroy(impact, 1f);
+        if (hit.transform.GetComponent<EnemyHealth>() == true)
+        {
+            Instantiate(_hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+        }
+        else
+        {
+            Instantiate(_hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
+        }
     }
 }
