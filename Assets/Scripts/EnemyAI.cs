@@ -6,18 +6,20 @@ using UnityEngine.Animations;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] private Transform _target;
+    
     [SerializeField] private float _chaseRange;
     [SerializeField] private float _turnSpeed = 10f;
-    private EnemyHealth _health;
 
+    private EnemyHealth _health;
     NavMeshAgent navMeshAgent;
     private float _distanceToTarget = Mathf.Infinity;
     bool isProvoked;
+    private Transform _target;
 
 
     private void Start()
     {
+        _target = FindObjectOfType<PlayerHealth>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         _health= GetComponent<EnemyHealth>();
         GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;

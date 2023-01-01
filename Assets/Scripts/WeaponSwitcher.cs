@@ -6,6 +6,7 @@ public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] private int _currentWeapon = 0;
     [SerializeField] private InputAction _keyToSwitchWeapon;
+    [SerializeField] private Vector3 _defaultWeaponPosition = new Vector3(0.088f, 1.2f, 0.314f);
 
     private void OnEnable()
     {
@@ -57,11 +58,13 @@ public class WeaponSwitcher : MonoBehaviour
         {
             if (weaponIndex == _currentWeapon)
             {
-                weapon.gameObject.SetActive(true);
+                weapon.gameObject.GetComponent<Weapon>().enabled = true;
+                weapon.gameObject.transform.localPosition = _defaultWeaponPosition;
             }
             else
             {
-                weapon.gameObject.SetActive(false);
+                weapon.gameObject.GetComponent<Weapon>().enabled = false;
+                weapon.gameObject.transform.position = new Vector3(0, 0, 0);
             }
             weaponIndex++;
         }

@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _fireRate;
     [SerializeField] private Ammo _ammoSlot;
     [SerializeField] private AmmoType _ammoType;
+    [SerializeField] private TextMeshProUGUI _ammoText;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _gunShot;
     private float _nextTimeToFire = 0;
 
     private void OnEnable()
@@ -27,11 +31,19 @@ public class Weapon : MonoBehaviour
 
     void Update()
     {
+        DisplayAmmo();
         if (shoot.IsPressed() && _nextTimeToFire <= Time.time)
         {
             _nextTimeToFire = Time.time + 1f / _fireRate;
             Shoot();
         }
+    }
+
+    private void DisplayAmmo()
+    {
+        int currentAmmo = _ammoSlot.GetCurrentAmmo(_ammoType);
+        _ammoText.text = $"{_ammoType} {currentAmmo}";
+        
     }
 
     private void Shoot()
@@ -40,6 +52,12 @@ public class Weapon : MonoBehaviour
         _ammoSlot.ReduceCurrentAmmo(_ammoType);
         ProcessRayCast();
         PlayMuzzleFlash();
+        PlaySoundEffect();
+    }
+
+    private void PlaySoundEffect()
+    {
+        _audioSource.PlayOneShot(_gunShot);
     }
 
     private void PlayMuzzleFlash()
