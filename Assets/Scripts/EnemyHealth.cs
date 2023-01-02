@@ -5,10 +5,16 @@ using UnityEngine.Animations;
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private float _hitPoints;
+    [SerializeField] private EnemySound _deathSoundFX;
 
     private bool _isDead = false;
 
     public bool IsDead => _isDead;
+
+    private void Start()
+    {
+        _deathSoundFX = GetComponent<EnemySound>();
+    }
 
     public void TakeDamage(float damage)
     {
@@ -25,6 +31,7 @@ public class EnemyHealth : MonoBehaviour
     {
         if (_isDead) { return; }
         _isDead= true;
+        _deathSoundFX.PlayDeathSound();
         GetComponent<Animator>().SetTrigger("dead");
         Destroy(gameObject, 3f);
     }

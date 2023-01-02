@@ -310,6 +310,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9e9979489d027074f8d6f4d81fa1dbf7, type: 3}
   - {fileID: 8300000, guid: 8326bd5a7e45b2846bb91945195fb454, type: 3}
   - {fileID: 8300000, guid: 43a45159c9154ef4b976e11adfa42e0f, type: 3}
+  _deathSound: {fileID: 8300000, guid: 66fb86861f58cec4fb30e2f3853df811, type: 3}
 --- !u!1001 &408032945279661573
 PrefabInstance:
   m_ObjectHideFlags: 0
