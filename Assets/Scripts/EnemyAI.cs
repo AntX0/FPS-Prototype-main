@@ -11,7 +11,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] private Transform _target;
 
     private EnemyHealth _health;
-    NavMeshAgent navMeshAgent;
+    private NavMeshAgent _navMeshAgent;
     private float _distanceToTarget = Mathf.Infinity;
     bool isProvoked;
     
@@ -21,7 +21,7 @@ public class EnemyAI : MonoBehaviour
     private void Start()
     {
         _target = DefineTargetPosition();
-        navMeshAgent = GetComponent<NavMeshAgent>();
+        _navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
         GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;
     }
@@ -45,14 +45,13 @@ public class EnemyAI : MonoBehaviour
     {
         if (_health.IsDead)
         {
-            enabled = false;
-            navMeshAgent.enabled = false;
+            _navMeshAgent.enabled = false;
             return;
         }
         _distanceToTarget = Vector3.Distance(_target.position, transform.position);
         if (isProvoked)
         {
-            if (_distanceToTarget <= navMeshAgent.stoppingDistance)
+            if (_distanceToTarget <= _navMeshAgent.stoppingDistance)
                 RotateToTarget();
             EngageTarget();
         }
@@ -65,12 +64,12 @@ public class EnemyAI : MonoBehaviour
 
     private void EngageTarget()
     {
-        if (_distanceToTarget >= navMeshAgent.stoppingDistance)
+        if (_distanceToTarget >= _navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
         }
 
-        if (_distanceToTarget <= navMeshAgent.stoppingDistance)
+        if (_distanceToTarget <= _navMeshAgent.stoppingDistance)
         {
             AttackTarget();
         }
@@ -80,7 +79,7 @@ public class EnemyAI : MonoBehaviour
     {
         GetComponent<Animator>().SetBool("attack", false);
         GetComponent<Animator>().SetTrigger("move");
-        navMeshAgent.SetDestination(_target.position);
+        _navMeshAgent.SetDestination(_target.position);
     }
 
     private void AttackTarget()

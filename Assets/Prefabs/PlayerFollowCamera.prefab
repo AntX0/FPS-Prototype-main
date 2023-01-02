@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8762286023885395322}
   - component: {fileID: 8762286023885395323}
+  - component: {fileID: 1101738276}
+  - component: {fileID: 1101738277}
   m_Layer: 0
   m_Name: PlayerFollowCamera
   m_TagString: Untagged
@@ -54,7 +56,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 90.11
+    FieldOfView: 90
     OrthographicSize: 10
     NearClipPlane: 0.09
     FarClipPlane: 500
@@ -71,6 +73,38 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 8762286024517199038}
+--- !u!95 &1101738276
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762286023885395077}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86d00908d6137bb499bc9a2998e18128, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1101738277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8762286023885395077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c4d00adcc42264baaa4109fe595ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8762286024517199033
 GameObject:
   m_ObjectHideFlags: 0
@@ -147,10 +181,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damping: {x: 0, y: 0, z: 0}
-  ShoulderOffset: {x: 0, y: 0, z: 0}
+  ShoulderOffset: {x: 0, y: -0.01, z: 0}
   VerticalArmLength: 0
   CameraSide: 0.6
-  CameraDistance: 0
+  CameraDistance: -0.06
   CameraCollisionFilter:
     serializedVersion: 2
     m_Bits: 1
