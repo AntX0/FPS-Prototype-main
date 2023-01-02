@@ -133,6 +133,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _chaseRange: 66.33
   _turnSpeed: 10
+  _isPlayerTarget: 1
+  _target: {fileID: 0}
 --- !u!95 &5103111834200183236
 Animator:
   serializedVersion: 4
@@ -168,7 +170,6 @@ MonoBehaviour:
   _target: {fileID: 0}
   _targetPlayer: {fileID: 0}
   _damage: 40
-  isPlayerTarget: 1
 --- !u!65 &7350236077958255573
 BoxCollider:
   m_ObjectHideFlags: 0
