@@ -1,76 +1,81 @@
 fileFormatVersion: 2
-guid: c256d06ac23fc304783b388694974f3e
+guid: b016c47471710bb4896910cfd5674a8f
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Rig
-    100004: RigHead
-    100006: RigJaw
-    100008: RigLArm1
-    100010: RigLArm1Gizmo
-    100012: RigLArm2
-    100014: RigLArm2Gizmo
-    100016: RigLArmPalm
-    100018: RigLArmPalmGizmo
-    100020: RigLLeg1
-    100022: RigLLeg2
-    100024: RigLLegAnkle
-    100026: RigLLegPlatform
-    100028: RigNeck1
-    100030: RigNeck2
-    100032: RigPelvis
-    100034: RigPelvisGizmo
-    100036: RigRArm1
-    100038: RigRArm1Gizmo
-    100040: RigRArm2
-    100042: RigRArm2Gizmo
-    100044: RigRArmPalm
-    100046: RigRArmPalmGizmo
-    100048: RigRibcage
-    100050: RigRibcageGizmo
-    100052: RigRLeg1
-    100054: RigRLeg2
-    100056: RigRLegAnkle
-    100058: RigRLegPlatform
-    100060: RigSpine1
-    100062: RigSpine2
-    100064: RigSpine3
-    400000: //RootNode
-    400002: Rig
-    400004: RigHead
-    400006: RigJaw
-    400008: RigLArm1
-    400010: RigLArm1Gizmo
-    400012: RigLArm2
-    400014: RigLArm2Gizmo
-    400016: RigLArmPalm
-    400018: RigLArmPalmGizmo
-    400020: RigLLeg1
-    400022: RigLLeg2
-    400024: RigLLegAnkle
-    400026: RigLLegPlatform
-    400028: RigNeck1
-    400030: RigNeck2
-    400032: RigPelvis
-    400034: RigPelvisGizmo
-    400036: RigRArm1
-    400038: RigRArm1Gizmo
-    400040: RigRArm2
-    400042: RigRArm2Gizmo
-    400044: RigRArmPalm
-    400046: RigRArmPalmGizmo
-    400048: RigRibcage
-    400050: RigRibcageGizmo
-    400052: RigRLeg1
-    400054: RigRLeg2
-    400056: RigRLegAnkle
-    400058: RigRLegPlatform
-    400060: RigSpine1
-    400062: RigSpine2
-    400064: RigSpine3
-    7400000: Attack 01
+    100000: Boximon Cyclopes
+    100002: //RootNode
+    100004: Rig
+    100006: RigHead
+    100008: RigJaw
+    100010: RigLArm1
+    100012: RigLArm1Gizmo
+    100014: RigLArm2
+    100016: RigLArm2Gizmo
+    100018: RigLArmPalm
+    100020: RigLArmPalmGizmo
+    100022: RigLLeg1
+    100024: RigLLeg2
+    100026: RigLLegAnkle
+    100028: RigLLegPlatform
+    100030: RigNeck1
+    100032: RigNeck2
+    100034: RigPelvis
+    100036: RigPelvisGizmo
+    100038: RigRArm1
+    100040: RigRArm1Gizmo
+    100042: RigRArm2
+    100044: RigRArm2Gizmo
+    100046: RigRArmPalm
+    100048: RigRArmPalmGizmo
+    100050: RigRibcage
+    100052: RigRibcageGizmo
+    100054: RigRLeg1
+    100056: RigRLeg2
+    100058: RigRLegAnkle
+    100060: RigRLegPlatform
+    100062: RigSpine1
+    100064: RigSpine2
+    100066: RigSpine3
+    400000: Boximon Cyclopes
+    400002: //RootNode
+    400004: Rig
+    400006: RigHead
+    400008: RigJaw
+    400010: RigLArm1
+    400012: RigLArm1Gizmo
+    400014: RigLArm2
+    400016: RigLArm2Gizmo
+    400018: RigLArmPalm
+    400020: RigLArmPalmGizmo
+    400022: RigLLeg1
+    400024: RigLLeg2
+    400026: RigLLegAnkle
+    400028: RigLLegPlatform
+    400030: RigNeck1
+    400032: RigNeck2
+    400034: RigPelvis
+    400036: RigPelvisGizmo
+    400038: RigRArm1
+    400040: RigRArm1Gizmo
+    400042: RigRArm2
+    400044: RigRArm2Gizmo
+    400046: RigRArmPalm
+    400048: RigRArmPalmGizmo
+    400050: RigRibcage
+    400052: RigRibcageGizmo
+    400054: RigRLeg1
+    400056: RigRLeg2
+    400058: RigRLegAnkle
+    400060: RigRLegPlatform
+    400062: RigSpine1
+    400064: RigSpine2
+    400066: RigSpine3
+    2100000: 01 - Default
+    4300000: Boximon Cyclopes
+    7400000: Walk Forward W Root
     9500000: //RootNode
+    13700000: Boximon Cyclopes
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -107,21 +112,21 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack 01
+      name: Walk Forward W Root
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 25
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 1
-      loopBlendPositionY: 1
-      loopBlendPositionXZ: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
       keepOriginalPositionXZ: 0

@@ -16,9 +16,9 @@ public class AppleHitPoints : MonoBehaviour
 
         if (_currentHealth <= 0)
         {
-            _currentHealth = 0; 
-            Debug.Log(_currentHealth);
+            _currentHealth = 0;
             gameObject.SetActive(false);
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 }

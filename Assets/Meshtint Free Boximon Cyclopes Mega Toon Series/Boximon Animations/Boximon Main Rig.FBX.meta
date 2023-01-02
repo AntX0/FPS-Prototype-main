@@ -282,6 +282,8 @@ ModelImporter:
   referencedClips:
   - c256d06ac23fc304783b388694974f3e
   - f90822dc21243c143832aadcda799012
+  - bee621bf45f5e3743aeafce3f92b298b
+  - 5b408497ed5cf8b4ab8c8b5af5ca736d
   - 3014723763036b442b52f60b16e2aa31
   - 4cad842dbf772894698e9a0bbaf5acef
   - ff0e4d52b383a234ba466e17fa99c433
@@ -289,7 +291,6 @@ ModelImporter:
   - b061ae134f6f1184eafbd5a4797f1571
   - 18abc2beedf0b4a499d3f8f43782198e
   - 29aefb5f354ef414099d5d72f4702cf7
-  - b016c47471710bb4896910cfd5674a8f
   importAnimation: 1
   humanDescription:
     serializedVersion: 3

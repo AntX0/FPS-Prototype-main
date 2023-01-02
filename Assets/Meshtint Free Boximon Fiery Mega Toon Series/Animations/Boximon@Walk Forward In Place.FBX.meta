@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c256d06ac23fc304783b388694974f3e
+guid: 5b7e31ac0a709b24ab69c08e9b423412
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -69,7 +69,7 @@ ModelImporter:
     400060: RigSpine1
     400062: RigSpine2
     400064: RigSpine3
-    7400000: Attack 01
+    7400000: Walk Forward In Place
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -107,17 +107,17 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Attack 01
+      name: Walk Forward In Place
       takeName: Take 001
       firstFrame: 0
-      lastFrame: 25
+      lastFrame: 35
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1

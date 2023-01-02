@@ -4,20 +4,23 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    
+
     [SerializeField] private float _chaseRange;
     [SerializeField] private float _turnSpeed = 10f;
+    [SerializeField] private bool _isPlayerTarget = true;
+    [SerializeField] private Transform _target;
 
     private EnemyHealth _health;
     NavMeshAgent navMeshAgent;
     private float _distanceToTarget = Mathf.Infinity;
     bool isProvoked;
-    private Transform _target;
+    
+    public bool IsPlayerTarget => _isPlayerTarget;
 
 
     private void Start()
     {
-        _target = FindObjectOfType<AppleHitPoints>().transform;
+        _target = DefineTargetPosition();
         navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
         GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;
@@ -30,6 +33,13 @@ public class EnemyAI : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _chaseRange);
     }
 
+    private Transform DefineTargetPosition()
+    {
+        if (_isPlayerTarget)
+            return FindObjectOfType<PlayerHealth>().transform;
+        else
+            return FindObjectOfType<AppleHitPoints>().transform;
+    }
 
     private void Update()
     {
@@ -48,7 +58,7 @@ public class EnemyAI : MonoBehaviour
         }
         else if (_distanceToTarget <= _chaseRange)
         {
-            isProvoked = true;     
+            isProvoked = true;
         }
     }
 
@@ -81,7 +91,7 @@ public class EnemyAI : MonoBehaviour
     private void RotateToTarget()
     {
         Vector3 directionToTarget = (_target.position - transform.position).normalized;
-        Quaternion lookAtRotation = Quaternion.LookRotation(new Vector3 (directionToTarget.x, 0, directionToTarget.z));
+        Quaternion lookAtRotation = Quaternion.LookRotation(new Vector3(directionToTarget.x, 0, directionToTarget.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime * _turnSpeed);
     }
 }
