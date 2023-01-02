@@ -1,8 +1,6 @@
-using System;
-using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
+
 
 public class EnemyAI : MonoBehaviour
 {
@@ -21,7 +19,7 @@ public class EnemyAI : MonoBehaviour
     {
         _target = FindObjectOfType<PlayerHealth>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
-        _health= GetComponent<EnemyHealth>();
+        _health = GetComponent<EnemyHealth>();
         GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;
     }
 
