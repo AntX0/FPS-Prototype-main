@@ -17,7 +17,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Start()
     {
-        _target = FindObjectOfType<PlayerHealth>().transform;
+        _target = FindObjectOfType<AppleHitPoints>().transform;
         navMeshAgent = GetComponent<NavMeshAgent>();
         _health = GetComponent<EnemyHealth>();
         GetComponent<EnemyHealth>().OnTakenDamage += (sender, args) => isProvoked = true;
@@ -42,7 +42,8 @@ public class EnemyAI : MonoBehaviour
         _distanceToTarget = Vector3.Distance(_target.position, transform.position);
         if (isProvoked)
         {
-            RotateToTarget();
+            if (_distanceToTarget <= navMeshAgent.stoppingDistance)
+                RotateToTarget();
             EngageTarget();
         }
         else if (_distanceToTarget <= _chaseRange)

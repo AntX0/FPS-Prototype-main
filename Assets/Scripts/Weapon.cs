@@ -89,11 +89,13 @@ public class Weapon : MonoBehaviour
         if (hit.transform == null) { return; }
         if (hit.transform.GetComponent<EnemyHealth>() == true)
         {
-            Instantiate(_hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+            GameObject impact = Instantiate(_hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impact, 0.1f);
         }
         else
         {
-            Instantiate(_hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
+            GameObject impact2 = Instantiate(_hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(impact2, 0.1f);
         }
     }
 }
