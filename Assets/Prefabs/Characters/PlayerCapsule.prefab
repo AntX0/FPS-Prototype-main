@@ -64,6 +64,7 @@ MonoBehaviour:
       m_Action: Key To Switch Weapon
       m_Flags: 0
     m_Flags: 0
+  _defaultWeaponPosition: {x: 0.088, y: 1.2, z: 0.314}
 --- !u!1 &4135013735270702863
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,8 +432,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5270b0e9ad497614b8c951bbd1dc419c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerHitPoints: 120
+  _playerHitPoints: 200
   _impact: {fileID: 1498880462038795224}
+  _playerHealthFront: {fileID: 0}
+  _playerHealthBackground: {fileID: 0}
+  _chipSpeed: 2
 --- !u!114 &135756641613574984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1236257789494122, guid: 8b0b86b42def11849a8eba21f4a6a684, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4243371153570508, guid: 8b0b86b42def11849a8eba21f4a6a684, type: 3}
       propertyPath: m_RootOrder
@@ -762,6 +766,11 @@ PrefabInstance:
       propertyPath: _ammoSlot
       value: 
       objectReference: {fileID: 5830152750134793445}
+    - target: {fileID: 4950525736074001892, guid: 8b0b86b42def11849a8eba21f4a6a684,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4950525736074001892, guid: 8b0b86b42def11849a8eba21f4a6a684,
         type: 3}
       propertyPath: _audioSource
