@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7915563559815180984}
   - component: {fileID: 3895989248550683547}
   - component: {fileID: 3447970004334021093}
+  - component: {fileID: 52124692157082876}
   m_Layer: 0
   m_Name: AmmoPickup
   m_TagString: Untagged
@@ -158,3 +159,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &52124692157082876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 375370787124136097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5441e289ed4d7246bcb0ba94b2cf54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

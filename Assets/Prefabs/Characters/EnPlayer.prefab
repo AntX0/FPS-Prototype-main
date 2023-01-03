@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7350236077958255573}
   - component: {fileID: 2700746389531681728}
   - component: {fileID: 934262083572435704}
+  - component: {fileID: 2333370158543706916}
   m_Layer: 0
   m_Name: EnPlayer
   m_TagString: Enemy
@@ -317,6 +318,21 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8326bd5a7e45b2846bb91945195fb454, type: 3}
   - {fileID: 8300000, guid: 43a45159c9154ef4b976e11adfa42e0f, type: 3}
   _deathSound: {fileID: 8300000, guid: 66fb86861f58cec4fb30e2f3853df811, type: 3}
+--- !u!114 &2333370158543706916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5081975443013370763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9d9f924e249912438d4d410028bb45b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _possibleLoot:
+  - {fileID: 1535510528351466161, guid: 4af76567b99597341a7007f0478508f7, type: 3}
+  - {fileID: 3324286739373699875, guid: 8f446fb6124bbd6419f2970471ac04d7, type: 3}
 --- !u!1001 &1171656029895277071
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ PrefabInstance:
     - target: {fileID: 3895989248550683547, guid: 098a0660c65b5db45a877b6054a781f8,
         type: 3}
       propertyPath: _ammoAmount
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7915563559815180984, guid: 098a0660c65b5db45a877b6054a781f8,
         type: 3}

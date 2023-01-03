@@ -13,11 +13,13 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private bool _isDead = false;
 
     private NavMeshAgent _navMeshAgent;
+    private LootDrop _lootDrop;
 
     public bool IsDead => _isDead;
 
     private void Start()
     {
+        _lootDrop = GetComponent<LootDrop>();
         _navMeshAgent = GetComponent<NavMeshAgent>();
         _currentHitPoints = _hitPoints;
         _deathSoundFX = GetComponent<EnemySound>();
@@ -40,6 +42,7 @@ public class EnemyHealth : MonoBehaviour
         if (_isDead) { return; }
 
         _isDead = true;
+        _lootDrop.DropLoot();
         _deathSoundFX.PlayDeathSound();
         GetComponent<Animator>().SetTrigger("dead");
         Invoke(nameof(ProcessResurection), 3f);
