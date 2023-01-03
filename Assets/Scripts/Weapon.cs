@@ -44,7 +44,6 @@ public class Weapon : MonoBehaviour
     {
         int currentAmmo = _ammoSlot.GetCurrentAmmo(_ammoType);
         _ammoText.text = $"{_ammoType} {currentAmmo}";
-
     }
 
     private void Shoot()

@@ -45,7 +45,7 @@ public class EnemyHealth : MonoBehaviour
         _lootDrop.DropLoot();
         _deathSoundFX.PlayDeathSound();
         GetComponent<Animator>().SetTrigger("dead");
-        Invoke(nameof(ProcessResurection), 3f);
+        Invoke(nameof(ProcessResurection), 1f);
     }
 
     private void ProcessResurection()
