@@ -118,7 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hitPoints: 100
+  _currentHitPoints: 0
   _deathSoundFX: {fileID: 0}
+  _isDead: 0
 --- !u!114 &5081975443013370760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86e48e364f108f4479a7b222a2f80dac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseRange: 66.33
+  _chaseRange: 1000
   _turnSpeed: 10
   _isPlayerTarget: 1
   _target: {fileID: 0}

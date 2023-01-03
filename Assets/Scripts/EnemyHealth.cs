@@ -50,7 +50,7 @@ public class EnemyHealth : MonoBehaviour
         gameObject.SetActive(false);
         _isDead = false;
         _navMeshAgent.enabled = true;
-        transform.position = FindObjectOfType<EnemyPool>().transform.position;
+        transform.position = GetComponentInParent<Transform>().transform.position;
         _currentHitPoints += _hitPoints;
     }
 

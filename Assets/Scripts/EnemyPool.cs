@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class EnemyPool : MonoBehaviour
 {
@@ -8,8 +9,7 @@ public class EnemyPool : MonoBehaviour
     [SerializeField][Range(0, 50)] private int _poolSize;
     [SerializeField][Range(0.1f, 30f)] private float _spawnRate;
 
-    
-
+    private float _difficulty;
     GameObject[] pool;
 
     private void Awake()
@@ -20,6 +20,16 @@ public class EnemyPool : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnEnemy());
+        StartCoroutine(DifficultyIncrease());
+    }
+
+    private IEnumerator DifficultyIncrease()
+    {
+        while (true && _spawnRate >= 1)
+        {
+            _spawnRate -= 1;
+            yield return new WaitForSeconds(15);
+        }
     }
 
     private void PopulatePool()
