@@ -1,8 +1,10 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AppleHitPoints : MonoBehaviour
 {
     [Range(0, 999)] [SerializeField] private float _appleHitPoints = 100f;
+    [SerializeField] private Image _appleHealth;
     [SerializeField] private float _currentHealth;
 
     private DeathHandler _death;
@@ -20,6 +22,8 @@ public class AppleHitPoints : MonoBehaviour
         _currentHealth -= amountToDecrease;
         _takeDamageFX.PlayTakeDamageFX();
 
+        UpdateHealthUI();
+
         if (_currentHealth <= 0)
         {
             ProcessGameOver();
@@ -30,5 +34,11 @@ public class AppleHitPoints : MonoBehaviour
     {
         _currentHealth = 0;
         _death.HandleDeath();
+    }
+
+    private void UpdateHealthUI()
+    {
+        float healthFraction = _currentHealth / _appleHitPoints;
+        _appleHealth.fillAmount = healthFraction;
     }
 }

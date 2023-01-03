@@ -193,8 +193,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3
-  m_Center: {x: -0.0000024735928, y: 0.06987905, z: -0.0055559725}
+  m_Radius: 0.29900452
+  m_Center: {x: -0.000002466702, y: 0.0688836, z: -0.005555959}
 --- !u!1 &561045043
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,6 +552,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1847659068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1847659068, guid: f0271df749728104eac22c3d897fd8ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 746329221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1910867934
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,6 +1049,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 524096448, guid: bfec01bc3e4d0444dbe595b4f55c6730, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1105760525757012, guid: bfec01bc3e4d0444dbe595b4f55c6730, type: 3}
       propertyPath: m_Name
       value: Apple
@@ -1051,7 +1067,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4068391342463826, guid: bfec01bc3e4d0444dbe595b4f55c6730, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.07
+      value: 9.015
       objectReference: {fileID: 0}
     - target: {fileID: 4068391342463826, guid: bfec01bc3e4d0444dbe595b4f55c6730, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1085,6 +1101,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8188007239654384127, guid: bfec01bc3e4d0444dbe595b4f55c6730,
+        type: 3}
+      propertyPath: _appleHealth
+      value: 
+      objectReference: {fileID: 1847659068}
     - target: {fileID: 8188007239654384127, guid: bfec01bc3e4d0444dbe595b4f55c6730,
         type: 3}
       propertyPath: _appleHitPoints
