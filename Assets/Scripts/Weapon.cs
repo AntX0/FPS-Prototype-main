@@ -19,6 +19,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _gunShot;
     private float _nextTimeToFire = 0;
+    private Animator _animator;
 
     private void OnEnable()
     {
@@ -28,6 +29,11 @@ public class Weapon : MonoBehaviour
     private void OnDisable()
     {
         shoot.Disable();
+    }
+
+    private void Start()
+    {
+        _animator= GetComponent<Animator>();
     }
 
     void Update()
@@ -40,7 +46,7 @@ public class Weapon : MonoBehaviour
         }
         else if (shoot.IsPressed() == false)
         {
-            GetComponent<Animator>().SetBool("Shoot", false);
+            _animator.SetBool("Shoot", false);
         }
         
     }
@@ -53,9 +59,9 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
-        if (_ammoSlot.GetCurrentAmmo(_ammoType) == 0) { return; }
+        if (_ammoSlot.GetCurrentAmmo(_ammoType) == 0) { _animator.SetBool("Shoot", false); return; }
         _ammoSlot.ReduceCurrentAmmo(_ammoType);
-        GetComponent<Animator>().SetBool("Shoot", true);
+        _animator.SetBool("Shoot", true);
         ProcessRayCast();
         PlayMuzzleFlash();
         PlaySoundEffect();
