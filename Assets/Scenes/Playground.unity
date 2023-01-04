@@ -371,7 +371,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
@@ -817,7 +817,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
@@ -1219,7 +1219,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
@@ -3366,7 +3366,7 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 0
+  m_DrawInstanced: 1
   m_DrawTreesAndFoliage: 1
   m_StaticShadowCaster: 0
   m_ReflectionProbeUsage: 1
@@ -4160,6 +4160,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8345070699414287370}
     m_Modifications:
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_TreeDistance
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_DrawInstanced
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_DetailObjectDensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_HeightmapPixelError
+      value: 77.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_DetailObjectDistance
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8345655880722177321, guid: 03214d9e153f5134494d34e339ae1133,
+        type: 3}
+      propertyPath: m_TreeBillboardDistance
+      value: 159
+      objectReference: {fileID: 0}
     - target: {fileID: 8345655880722177323, guid: 03214d9e153f5134494d34e339ae1133,
         type: 3}
       propertyPath: m_RootOrder

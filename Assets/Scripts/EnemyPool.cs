@@ -9,7 +9,6 @@ public class EnemyPool : MonoBehaviour
     [SerializeField][Range(0, 50)] private int _poolSize;
     [SerializeField][Range(0.1f, 100f)] private float _spawnRate;
 
-    private float _difficulty;
     GameObject[] pool;
 
     private void Awake()
