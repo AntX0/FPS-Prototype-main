@@ -18,6 +18,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _ammoText;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _gunShot;
+    private EnemyHealth _enemy;
     private float _nextTimeToFire = 0;
     private Animator _animator;
 
@@ -33,7 +34,8 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        _animator= GetComponent<Animator>();
+        _enemy = GetComponent<EnemyHealth>();
+        _animator = GetComponent<Animator>();
     }
 
     void Update()
