@@ -38,6 +38,11 @@ public class Weapon : MonoBehaviour
             _nextTimeToFire = Time.time + 1f / _fireRate;
             Shoot();
         }
+        else if (shoot.IsPressed() == false)
+        {
+            GetComponent<Animator>().SetBool("Shoot", false);
+        }
+        
     }
 
     private void DisplayAmmo()
@@ -50,6 +55,7 @@ public class Weapon : MonoBehaviour
     {
         if (_ammoSlot.GetCurrentAmmo(_ammoType) == 0) { return; }
         _ammoSlot.ReduceCurrentAmmo(_ammoType);
+        GetComponent<Animator>().SetBool("Shoot", true);
         ProcessRayCast();
         PlayMuzzleFlash();
         PlaySoundEffect();

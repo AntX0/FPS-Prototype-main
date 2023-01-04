@@ -47,5 +47,5 @@ MonoBehaviour:
   _enemyPrefab:
   - {fileID: 5081975443013370763, guid: d7fce5a9657ed2448b43b7048658a539, type: 3}
   - {fileID: 5081975443013370763, guid: 1db0e96a1df95a6469e1459c163f9944, type: 3}
-  _poolSize: 10
-  _spawnRate: 5.1
+  _poolSize: 17
+  _spawnRate: 63.6

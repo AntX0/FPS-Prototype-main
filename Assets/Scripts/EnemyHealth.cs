@@ -1,9 +1,6 @@
 using System;
-using System.Collections;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.AI;
-using UnityEngine.Animations;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -54,6 +51,7 @@ public class EnemyHealth : MonoBehaviour
         _isDead = false;
         _navMeshAgent.enabled = true;
         transform.position = GetComponentInParent<Transform>().transform.position;
+        _hitPoints += 25;
         _currentHitPoints += _hitPoints;
     }
 

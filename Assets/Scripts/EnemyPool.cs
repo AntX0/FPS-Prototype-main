@@ -7,7 +7,7 @@ public class EnemyPool : MonoBehaviour
 {
     [SerializeField] private GameObject[] _enemyPrefab;
     [SerializeField][Range(0, 50)] private int _poolSize;
-    [SerializeField][Range(0.1f, 30f)] private float _spawnRate;
+    [SerializeField][Range(0.1f, 100f)] private float _spawnRate;
 
     private float _difficulty;
     GameObject[] pool;
@@ -28,7 +28,7 @@ public class EnemyPool : MonoBehaviour
         while (true && _spawnRate >= 1)
         {
             _spawnRate -= 1;
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(8);
         }
     }
 
