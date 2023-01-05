@@ -1,5 +1,3 @@
-using System;
-using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,7 +16,8 @@ public class Weapon : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _ammoText;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _gunShot;
-    private EnemyHealth _enemy;
+
+    [SerializeField] private float _currentDamage;
     private float _nextTimeToFire = 0;
     private Animator _animator;
 
@@ -34,7 +33,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        _enemy = GetComponent<EnemyHealth>();
+        _currentDamage = _damage;
         _animator = GetComponent<Animator>();
     }
 
@@ -50,7 +49,11 @@ public class Weapon : MonoBehaviour
         {
             _animator.SetBool("Shoot", false);
         }
-        
+    }
+
+    public float GetCurrentDamage()
+    {
+        return _currentDamage;
     }
 
     private void DisplayAmmo()
@@ -85,15 +88,27 @@ public class Weapon : MonoBehaviour
         if (Physics.Raycast(FPCamera.transform.position, FPCamera.transform.forward, out hit, _range))
         {
             CreateHitImpact(hit);
-            EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-            if (target)
-            {
-                target.TakeDamage(_damage);
-            }
+            IdentifyTargetType(hit);
         }
         else
         {
             return;
+        }
+    }
+
+    private void IdentifyTargetType(RaycastHit hit)
+    {
+        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        UpgradeButton button = hit.transform.GetComponent<UpgradeButton>();
+
+        if (target)
+        {
+            target.TakeDamage(_currentDamage);
+        }
+        else if (button)
+        {
+            _currentDamage = button.IncreaseWeaponDamage();
+            Debug.Log(_currentDamage);
         }
     }
 
