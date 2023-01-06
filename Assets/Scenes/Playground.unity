@@ -137,12 +137,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437628, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -221,12 +221,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -987,12 +987,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437628, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -1324,12 +1324,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437628, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -1732,12 +1732,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -2849,6 +2849,18 @@ Canvas:
     type: 3}
   m_PrefabInstance: {fileID: 746329221}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1127849141 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6579573885635248079, guid: f0271df749728104eac22c3d897fd8ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 746329221}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1140439547
 GameObject:
   m_ObjectHideFlags: 0
@@ -3075,12 +3087,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437628, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -3580,12 +3592,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
@@ -5886,8 +5898,18 @@ PrefabInstance:
       objectReference: {fileID: 1125712503}
     - target: {fileID: 135756641613574985, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
+      propertyPath: _coinPickup
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 135756641613574985, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _currentCoinsText
+      value: 
+      objectReference: {fileID: 1127849141}
+    - target: {fileID: 135756641613574985, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
       propertyPath: _currentCoinAmmount
-      value: 101
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 646291973384329586, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
@@ -5924,6 +5946,11 @@ PrefabInstance:
       propertyPath: _playerHealthBackground
       value: 
       objectReference: {fileID: 1552775439}
+    - target: {fileID: 5830152750134793445, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
+        type: 3}
+      propertyPath: _ammoSlots.Array.data[1].ammoAmount
+      value: 28
+      objectReference: {fileID: 0}
     - target: {fileID: 8616685848737228372, guid: c5efc39a8aaf6e64ea40e9ad573e9b47,
         type: 3}
       propertyPath: m_Name
@@ -5996,12 +6023,12 @@ PrefabInstance:
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _poolSize
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437571, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}
       propertyPath: _spawnRate
-      value: 71
+      value: 56
       objectReference: {fileID: 0}
     - target: {fileID: 6301746244322437628, guid: eb946e52204d4694597b3709aa1a2bda,
         type: 3}

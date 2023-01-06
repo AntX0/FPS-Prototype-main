@@ -332,6 +332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _possibleLoot:
   - {fileID: 4975060710376058943, guid: 9b3b8293776d392439ac5c7f5d137664, type: 3}
+  - {fileID: 1535510528351466161, guid: 4af76567b99597341a7007f0478508f7, type: 3}
 --- !u!1001 &408032945279661573
 PrefabInstance:
   m_ObjectHideFlags: 0

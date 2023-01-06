@@ -8,7 +8,7 @@ public class Ammo : MonoBehaviour
     private class AmmoSlot
     {
         public AmmoType ammoType;
-        public int ammoAmount; 
+        [Range(0, 999)] public int ammoAmount; 
     }
 
     public int GetCurrentAmmo(AmmoType ammoType)

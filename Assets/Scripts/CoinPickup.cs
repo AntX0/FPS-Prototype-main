@@ -2,10 +2,12 @@ using UnityEngine;
 
 public class CoinPickup : MonoBehaviour
 {
-    [SerializeField] private int _coinAmount = 10;
+    [SerializeField] private int _coinValue = 1;
     [SerializeField] private AudioClip _coinPickupSound;
     private PlayerHealth _player;
     private AudioSource _audioSource;
+
+    public int CoinValue => _coinValue;
 
     private void Start()
     {
