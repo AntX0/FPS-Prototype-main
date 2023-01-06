@@ -20,6 +20,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private float _currentDamage;
     private float _nextTimeToFire = 0;
     private Animator _animator;
+    private Money _money;
 
     private void OnEnable()
     {
@@ -33,6 +34,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
+        _money = FindObjectOfType<Money>();
         _currentDamage = _damage;
         _animator = GetComponent<Animator>();
     }
@@ -105,9 +107,10 @@ public class Weapon : MonoBehaviour
         {
             target.TakeDamage(_currentDamage);
         }
-        else if (button && gameObject.CompareTag("Rifle"))
+        else if (button && gameObject.CompareTag("Rifle") && _money.CurrentCoinAmmount >= button.UpgradeCost)
         {
             _currentDamage = button.IncreaseWeaponDamage();
+            _money.DecreaseCoinAmmount(button.UpgradeCost);
             Debug.Log(_currentDamage);
         }
     }

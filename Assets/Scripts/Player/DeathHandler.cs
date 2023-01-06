@@ -19,5 +19,4 @@ public class DeathHandler : MonoBehaviour
         Cursor.visible = true;
         GetComponent<FirstPersonController>().enabled = false;
     }
-
 }

@@ -4,6 +4,9 @@ public class UpgradeButton : MonoBehaviour
 {
     [SerializeField] private GameObject _weaponPrefab;
     [SerializeField] private float _ammountToIncrease = 10f;
+    [SerializeField] private int _upgradeCost;
+
+    public int UpgradeCost => _upgradeCost;
 
     private Weapon _weapon;
 

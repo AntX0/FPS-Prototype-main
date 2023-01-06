@@ -214,6 +214,7 @@ GameObject:
   - component: {fileID: 5830152750134793445}
   - component: {fileID: 1498880462038795224}
   - component: {fileID: 135756641613574993}
+  - component: {fileID: 135756641613574985}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -466,7 +467,7 @@ MonoBehaviour:
   - ammoType: 0
     ammoAmount: 120
   - ammoType: 1
-    ammoAmount: 20
+    ammoAmount: 280
 --- !u!114 &1498880462038795224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +490,19 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8616685848737228372}
   m_Enabled: 1
+--- !u!114 &135756641613574985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddc9a6141cf862c49820e02923382bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentCoinAmmount: 0
 --- !u!1001 &4561241546132571450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -505,6 +519,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1041254174560802250, guid: 03df10231f8ffcb41a1422cffac7be58,
+        type: 3}
+      propertyPath: m_TagString
+      value: Rifle
       objectReference: {fileID: 0}
     - target: {fileID: 1044528669977541850, guid: 03df10231f8ffcb41a1422cffac7be58,
         type: 3}
@@ -784,7 +803,7 @@ PrefabInstance:
     - target: {fileID: 4950525736074001892, guid: 8b0b86b42def11849a8eba21f4a6a684,
         type: 3}
       propertyPath: _damage
-      value: 100.76
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 4950525736074001892, guid: 8b0b86b42def11849a8eba21f4a6a684,
         type: 3}
