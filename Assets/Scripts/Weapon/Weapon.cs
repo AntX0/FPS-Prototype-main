@@ -105,7 +105,7 @@ public class Weapon : MonoBehaviour
         {
             target.TakeDamage(_currentDamage);
         }
-        else if (button)
+        else if (button && gameObject.CompareTag("Rifle"))
         {
             _currentDamage = button.IncreaseWeaponDamage();
             Debug.Log(_currentDamage);
