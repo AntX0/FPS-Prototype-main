@@ -9,14 +9,17 @@ public class UpgradeButton : MonoBehaviour
     public int UpgradeCost => _upgradeCost;
 
     private Weapon _weapon;
+    private Money _money;
 
     private void Start()
     {
+        _money = FindObjectOfType<Money>();
         _weapon = _weaponPrefab.GetComponent<Weapon>();
     }
 
     public float IncreaseWeaponDamage()
     {
+        _money.DecreaseCoinAmmount(_upgradeCost);
         float currentDamage = _weapon.GetCurrentDamage();
         return currentDamage += _ammountToIncrease;
     }

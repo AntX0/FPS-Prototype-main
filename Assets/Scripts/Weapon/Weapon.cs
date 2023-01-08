@@ -110,7 +110,6 @@ public class Weapon : MonoBehaviour
         else if (button && gameObject.CompareTag("Rifle") && _money.CurrentCoinAmmount >= button.UpgradeCost)
         {
             _currentDamage = button.IncreaseWeaponDamage();
-            _money.DecreaseCoinAmmount(button.UpgradeCost);
             Debug.Log(_currentDamage);
         }
     }
