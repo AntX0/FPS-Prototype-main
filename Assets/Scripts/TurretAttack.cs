@@ -1,5 +1,3 @@
-using System;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TurretAttack : MonoBehaviour
@@ -8,7 +6,7 @@ public class TurretAttack : MonoBehaviour
     [SerializeField] private float _turretDamage = 10f;
 
     private TurretTargetLocator _turretTarget;
-    private float _nextTimeToShoot;
+    private float _time;
 
     private void Start()
     {
@@ -17,13 +15,20 @@ public class TurretAttack : MonoBehaviour
 
     public void AttackTarget()
     {
+        _time += Time.deltaTime;
+        float nextTimeToShoot = 1 / _fireRate;
+
         var direction = _turretTarget.Target.position - transform.position;
-        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _turretTarget.TurretAttackRange))
+        if (_time >= nextTimeToShoot)
         {
-            if (hit.transform == null) { return; }
-            Debug.Log(hit.collider.name);
-            _nextTimeToShoot = Time.time + 1f / _fireRate;
-            ApplyDamage(hit);
+            if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _turretTarget.TurretAttackRange))
+            {
+                if (hit.transform == null) { return; }
+                Debug.Log(hit.collider.name);
+                ApplyDamage(hit);
+            }
+
+            _time = 0;
         }
     }
 
