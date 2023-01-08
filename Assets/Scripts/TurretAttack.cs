@@ -12,22 +12,25 @@ public class TurretAttack : MonoBehaviour
 
     private void Start()
     {
-          _turretTarget = GetComponent<TurretTargetLocator>();
+        _turretTarget = GetComponent<TurretTargetLocator>();
     }
 
     public void AttackTarget()
     {
         var direction = _turretTarget.Target.position - transform.position;
         if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _turretTarget.TurretAttackRange))
-            if(_nextTimeToShoot <= Time.time)
-                _nextTimeToShoot = Time.time + 1f / _fireRate;
-                ApplyDamage(hit);
+        {
+            if (hit.transform == null) { return; }
+            Debug.Log(hit.collider.name);
+            _nextTimeToShoot = Time.time + 1f / _fireRate;
+            ApplyDamage(hit);
+        }
     }
 
     private void ApplyDamage(RaycastHit hit)
     {
         EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
-        if (target) 
+        if (target)
         {
             target.TakeDamage(_turretDamage);
         }
