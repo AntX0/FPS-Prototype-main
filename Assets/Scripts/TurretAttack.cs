@@ -1,29 +1,39 @@
+using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class TurretAttack : MonoBehaviour
 {
+    [SerializeField] private float _fireRate = 0.5f;
+    [SerializeField] private float _turretDamage = 10f;
+
     private TurretTargetLocator _turretTarget;
+    private float _nextTimeToShoot;
 
     private void Start()
     {
           _turretTarget = GetComponent<TurretTargetLocator>();
     }
 
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawLine(transform.position, transform.forward);
-    }
-
     public void AttackTarget()
     {
+        var direction = _turretTarget.Target.position - transform.position;
+        if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _turretTarget.TurretAttackRange))
+            if(_nextTimeToShoot <= Time.time)
+                _nextTimeToShoot = Time.time + 1f / _fireRate;
+                ApplyDamage(hit);
+    }
 
-        if (Physics.Raycast(transform.position, _turretTarget.Target.position, out RaycastHit hit, _turretTarget.TurretAttackRange))
-            Debug.Log(gameObject.name);
-            if (hit.transform.GetComponent<EnemyHealth>() == true)
-            {
-                Debug.Log("Hit");
-            }
-
+    private void ApplyDamage(RaycastHit hit)
+    {
+        EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+        if (target) 
+        {
+            target.TakeDamage(_turretDamage);
+        }
+        else
+        {
+            return;
+        }
     }
 }

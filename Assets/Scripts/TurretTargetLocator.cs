@@ -5,6 +5,7 @@ public class TurretTargetLocator : MonoBehaviour
 {
     [SerializeField] private float _turretRotationSpeed;
     [SerializeField] private float _turretAttackRange;
+   
 
     private Transform _target;
     private Quaternion _turretStartRotation;
