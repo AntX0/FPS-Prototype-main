@@ -17,7 +17,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _gunShot;
 
-    [SerializeField] private float _currentDamage;
+    private float _currentDamage;
     private float _nextTimeToFire = 0;
     private Animator _animator;
     private Money _money;

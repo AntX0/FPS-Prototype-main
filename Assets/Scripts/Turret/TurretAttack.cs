@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Experimental.GlobalIllumination;
+using UnityEngine.Rendering.Universal;
 
 public class TurretAttack : MonoBehaviour
 {
@@ -8,6 +10,7 @@ public class TurretAttack : MonoBehaviour
     [SerializeField] private float _turretDamage = 10f;
     [SerializeField] private GameObject _hitEffect;
 
+    
     private TurretTargetLocator _turretTarget;
     private float _time;
     private TurretAudioHandler _turretAudio;
@@ -35,6 +38,7 @@ public class TurretAttack : MonoBehaviour
             if (Physics.Raycast(transform.position, direction, out RaycastHit hit, _turretTarget.TurretAttackRange))
             {
                 if (hit.transform == null) { return; }
+
                 _turretAudio.PlayAttackSound();
                 ApplyDamage(hit);
             }

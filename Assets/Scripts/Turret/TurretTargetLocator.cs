@@ -10,6 +10,7 @@ public class TurretTargetLocator : MonoBehaviour
    
 
     private Transform _target;
+    private Light _pointLight;
     private Quaternion _turretStartRotation;
     private TurretAttack _turretAttack;
 
@@ -24,14 +25,16 @@ public class TurretTargetLocator : MonoBehaviour
 
     private void Start()
     {
-        _turretStartRotation = Quaternion.LookRotation(new Vector3 (0f, 0f, 0f));
+        _turretStartRotation = transform.rotation;
         _turretAttack = GetComponent<TurretAttack>();
+        _pointLight = FindObjectOfType<Light>();
     }
 
     private void Update()
     {
         FindClosestTarget();
-        if (_target == null) { ResetRotation(); return; }
+        if (_target == null) { ResetRotation(); _pointLight.enabled = false; return; }
+        _pointLight.enabled = true;
         RotateAtTarget();
         _turretAttack.AttackTarget();
     }
