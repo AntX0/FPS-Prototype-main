@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(DeathHandler))]
 public class PlayerHealth : MonoBehaviour
 {
     [SerializeField] private float _playerHitPoints = 100f;

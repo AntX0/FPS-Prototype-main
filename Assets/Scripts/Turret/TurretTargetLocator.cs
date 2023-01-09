@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(TurretAttack))]
+[RequireComponent(typeof(TurretAudioHandler))]
 public class TurretTargetLocator : MonoBehaviour
 {
     [SerializeField] private float _turretRotationSpeed;
@@ -59,7 +61,7 @@ public class TurretTargetLocator : MonoBehaviour
         if (targetDistance < _turretAttackRange)
         {
             Vector3 direction = _target.position - transform.position;
-            Quaternion lookAtRotation = Quaternion.LookRotation(new Vector3(direction.x, direction.y, direction.z));
+            Quaternion lookAtRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z).normalized);
             transform.rotation = Quaternion.Slerp(transform.rotation, lookAtRotation, Time.deltaTime * _turretRotationSpeed);
         }
     }
