@@ -17,13 +17,14 @@ public class Money : MonoBehaviour
 
     public void IncreaseCoinAmmount()
     {
-        if (_currentCoinAmmount < 0) { return; }
+        if (_currentCoinAmmount < 0) { _currentCoinAmmount = 0; return; }
         int _coinPickup = FindObjectOfType<CoinPickup>().CoinValue;
         _currentCoinAmmount += _coinPickup;
     }
 
     public void DecreaseCoinAmmount(int ammountToDecrease)
     {
+        if (_currentCoinAmmount <= 0) { _currentCoinAmmount = 0; return; }
         _currentCoinAmmount -= ammountToDecrease;
     }
 

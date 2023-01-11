@@ -7,6 +7,7 @@ public class CoinDropper : MonoBehaviour
     [SerializeField] private InputAction _dropCoin;
     private Money _money;
     private int _coinValue;
+    private Camera _mainCamera;
 
     private void OnEnable()
     {
@@ -22,6 +23,7 @@ public class CoinDropper : MonoBehaviour
     {
         _money = GetComponent<Money>();
         _coinValue = FindObjectOfType<CoinPickup>().CoinValue;
+        _mainCamera = FindObjectOfType<Camera>();
     }
 
     private void Update()
@@ -31,9 +33,12 @@ public class CoinDropper : MonoBehaviour
 
     private void DropCoin()
     {
-        if (_dropCoin.WasPressedThisFrame() && _money.CurrentCoinAmmount > 0)
+        Vector3 dropPosition = new Vector3(transform.position.x, transform.position.y + 1.4f, transform.position.z);
+        if (_dropCoin.WasPressedThisFrame() && _money.CurrentCoinAmmount >= _coinValue)
         {
             _money.DecreaseCoinAmmount(_coinValue);
+            GameObject instacne = Instantiate(_coinPrefab, dropPosition, Quaternion.identity);
+            instacne.GetComponent<Rigidbody>().AddForce(100 * _mainCamera.transform.forward, ForceMode.Impulse);
         }
     }
 }
