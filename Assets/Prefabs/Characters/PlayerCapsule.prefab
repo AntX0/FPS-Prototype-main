@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 1498880462038795224}
   - component: {fileID: 135756641613574993}
   - component: {fileID: 135756641613574985}
+  - component: {fileID: 135756641613574986}
   m_Layer: 8
   m_Name: PlayerCapsule
   m_TagString: Player
@@ -504,6 +505,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentCoinAmmount: 0
   _currentCoinsText: {fileID: 0}
+--- !u!114 &135756641613574986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8616685848737228372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce9f920ee1aa80248bdcbacf2d71337f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinPrefab: {fileID: 4975060710376058943, guid: 80c943dc0fef11f468678942d5775dda,
+    type: 3}
+  _dropCoin:
+    m_Name: Drop Coin
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: a6e50615-c2d0-47c0-868a-151705acab26
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: d33d0020-805b-433d-bf0a-00e55c98792e
+      m_Path: <Keyboard>/f
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Drop Coin
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1001 &4561241546132571450
 PrefabInstance:
   m_ObjectHideFlags: 0

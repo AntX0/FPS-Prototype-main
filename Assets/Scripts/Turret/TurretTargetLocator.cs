@@ -7,14 +7,15 @@ public class TurretTargetLocator : MonoBehaviour
 {
     [SerializeField] private float _turretRotationSpeed;
     [SerializeField] private float _turretAttackRange;
-   
+
 
     private Transform _target;
     private Light _pointLight;
     private Quaternion _turretStartRotation;
     private TurretAttack _turretAttack;
+    private TurretAudioHandler _turretAudio;
 
-    public float TurretAttackRange => _turretAttackRange; 
+    public float TurretAttackRange => _turretAttackRange;
     public Transform Target => _target;
 
     private void OnDrawGizmosSelected()
@@ -23,11 +24,12 @@ public class TurretTargetLocator : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, _turretAttackRange);
     }
 
-    private void Start()
+    private void Awake()
     {
         _turretStartRotation = transform.rotation;
         _turretAttack = GetComponent<TurretAttack>();
-        _pointLight = FindObjectOfType<Light>();
+        _pointLight = GetComponentInChildren<Light>();
+        _turretAudio = GetComponent<TurretAudioHandler>();
     }
 
     private void Update()
@@ -36,6 +38,7 @@ public class TurretTargetLocator : MonoBehaviour
         if (_target == null) { ResetRotation(); _pointLight.enabled = false; return; }
         _pointLight.enabled = true;
         RotateAtTarget();
+        _turretAudio.PlayProvokeSound();
         _turretAttack.AttackTarget();
     }
 

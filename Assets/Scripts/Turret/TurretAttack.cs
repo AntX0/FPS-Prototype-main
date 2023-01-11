@@ -1,8 +1,6 @@
 using System;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Experimental.GlobalIllumination;
-using UnityEngine.Rendering.Universal;
+
 
 public class TurretAttack : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class TurretAttack : MonoBehaviour
 
     public void AttackTarget()
     {
-        OnAttack?.Invoke(this, null);
         _time += Time.deltaTime;
         float nextTimeToShoot = 1 / _fireRate;
         var direction = transform.forward;
@@ -39,6 +36,7 @@ public class TurretAttack : MonoBehaviour
             {
                 if (hit.transform == null) { return; }
 
+                OnAttack?.Invoke(this, null);
                 _turretAudio.PlayAttackSound();
                 ApplyDamage(hit);
             }
