@@ -24,7 +24,7 @@ public class EnemyPool : MonoBehaviour
 
     private IEnumerator DifficultyIncrease()
     {
-        while (true && _spawnRate >= 1)
+        while (true && _spawnRate >= 10)
         {
             _spawnRate -= 1;
             yield return new WaitForSeconds(30);
