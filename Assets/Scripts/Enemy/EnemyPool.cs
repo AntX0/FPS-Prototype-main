@@ -27,7 +27,7 @@ public class EnemyPool : MonoBehaviour
         while (true && _spawnRate >= 1)
         {
             _spawnRate -= 1;
-            yield return new WaitForSeconds(8);
+            yield return new WaitForSeconds(30);
         }
     }
 
