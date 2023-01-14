@@ -1,4 +1,3 @@
-using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using TMPro;
 

@@ -9,6 +9,7 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale= 1.0f;
         Cursor.visible= false;
+        Cursor.lockState = CursorLockMode.Locked;
         FindObjectOfType<CameraShake>().GetComponent<CinemachineVirtualCamera>().m_Lens.Dutch = 0;
     }
 
